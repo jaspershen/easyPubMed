@@ -4,7 +4,7 @@ function(pubmed_query_string) {
   myQuery <- as.character(pubmed_query_string)
   myQuery <- gsub(" ", "+", myQuery, fixed = TRUE)
   # Pubmed API - query URL
-  myPubmedURL <- paste("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?",
+  myPubmedURL <- paste("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?",
                        "db=pubmed&term=",
                        myQuery,
                        "&usehistory=y",sep='')
