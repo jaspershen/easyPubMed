@@ -26,7 +26,7 @@ function(pubmed_id_list, retstart = 0, retmax = 500) {
     if (myRetmax < 1) { myRetmax = 1 }
     
     # put together the eutils URL for the query -- will retrieve a XML result
-    efetch_url = paste("http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?",
+    efetch_url = paste("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?",
                        "db=pubmed&WebEnv=",myWebEnv,
                        "&query_key=",myKey,
                        "&retstart=",myRetstart,
